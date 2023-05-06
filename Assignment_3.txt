@@ -1,0 +1,46 @@
+1. What is the concept of an abstract superclass?
+
+ANS An abstract superclass typically contains common properties and methods that are shared by its subclasses. However, it may also define abstract methods that its subclasses must implement in order to be fully functional. Abstract methods are declared but not defined, meaning that they don't have an implementation in the superclass. Instead, each subclass must provide its own implementation of the abstract method.
+
+2. What happens when a class statement's top level contains a basic assignment statement?
+
+ANS 
+When a class statement's top level contains a basic assignment statement, the statement creates a class-level variable that can be accessed by all instances of the class as well as the class itself.
+
+FOR EXAMPLE:
+ class Myclass:
+     x = 5
+ output:
+ Myclass.x
+
+   5
+
+ obj = Myclass()
+ print(obj.x)
+
+   5
+
+obj.x = 10
+obj.x  output: 10
+Myclass.x  output: 5
+
+
+3. Why does a class need to manually call a superclass's __init__ method?
+
+ans 
+In object-oriented programming, a class may need to manually call a superclass's __init__ method in order to properly initialize the superclass's state.
+
+When a subclass is created, it inherits all the properties and methods of its superclass. However, the subclass may also define its own properties and methods or override those of the superclass. In order to ensure that the superclass's state is properly initialized when a subclass object is created, the subclass needs to call the superclass's __init__ method explicitly.
+
+
+4. How can you augment, instead of completely replacing, an inherited method?
+
+
+ans In object-oriented programming, you can augment an inherited method instead of completely replacing it by using the super() function to call the parent class's implementation of the method and then adding additional functionality in the child class.
+
+
+
+5. How is the local scope of a class different from that of a function?
+
+
+ans The local scope of a class is focused on the class methods and attributes, while the local scope of a function is focused on the function body. While both have some similarities, they differ in terms of naming, accessibility, lifetime, inheritance, and visibility.
